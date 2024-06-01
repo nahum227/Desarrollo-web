@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start();?>
 
 <form method="post" enctype="multipart/form-data">  <!-- la propiedad enctype en corto es para trbajar con otras codificaciones como la de este archivo. en este formulario es para enviar la entrada tipo file-->
     <input type="file" name="imagen">

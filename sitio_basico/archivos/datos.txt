@@ -1,2 +1,0 @@
-Nombre1:Apellido1:23/04/2009:Uruguay
-Nombre2:Apellido2:12/12/2007:Uruguay

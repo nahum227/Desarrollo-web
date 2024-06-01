@@ -1,11 +1,44 @@
-FUNCIONES:
+--------------------------------------------------------------
+FUNCIONES
+-----------------------------------------------------
 
-move_upload_file();
+-----------
+CONSTANTES:
+-----------
+PHP_EOL: esta constante marca el final de una linea, al usarla para agregar contenido a un archivo hace un salto de linea
+
+-------------------
+GESTIONAR ARCHIVOS:
+-------------------
+move_upload_file( ruta_archivo , ruta_destino );
 esta funcion sirve para subir un archivo al servidor, usa ruta de archivo y destino
 
-file_exists();
+
+file_exists( ruta_archivo );
 es para verifica si existe un archivo
 
-file();
+
+file( ruta_archivo );
 es para obtener un archivo
 
+
+fopen( ruta_archivo, opcion );
+abrir un archivo 
+opciones:
+ r:leer
+ w:escribir
+ a:escribir, sin sobreescribir
+
+
+fread( archivo , longitud );
+leer un archivo
+
+
+filesize( ruta_archvo );
+devuelve el tamaño de un fichero. si se usa para indicar la longitud en la funcion fread( archivo , filesize( ruta_archivo ) ), esta nos leera el archivo completo.
+
+
+fclose( archivo );
+cerrar un archivo. esta funcion se usa para cerrar un archivo que esta abierto
+
+------------------------------------------------------------------
