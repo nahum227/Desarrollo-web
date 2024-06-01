@@ -1,0 +1,2 @@
+usuario1:password1:Nombre1:Apellido1
+usuario2:password2:Nombre2:Apellido2
