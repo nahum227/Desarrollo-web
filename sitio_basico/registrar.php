@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//
 //estas datos que se toman de $_SESSION son los que fueron ingresado en verificacion.php
 $username=$_SESSION['username'];
 $password=$_SESSION['password'];
