@@ -2,8 +2,7 @@
 
 $nom=$_SESSION['first_name'];
 $ape=$_SESSION['last_name'];
-$nac=$_SESSION['nacimiento'];
-$pais=$_SESSION['pais'];
+
 
 // pude haber usado $_session, pero no pude usarla en el formulario porque las comillas lo complican, asi que pase sus datos a variable comunes y use esas
 echo " 
@@ -12,9 +11,9 @@ echo "
     <br>
     <input type='text' name='apellido' value='$ape'>
     <br>
-    <input type='text' name='nacimiento' value='$nac'>
+    <input type='text' name='nacionalidad'>
     <br>
-    <input type='text' name='pais' value='$pais'>
+    <input type='text' name='pais'>
     <br>
     <input type='submit' name='enviar'>
 </form>
@@ -24,8 +23,7 @@ echo "
 if(isset($_POST['enviar'])){
     $nom=$_POST['nombre'];
     $ape=$_POST['apellido'];
-    $nac=$_POST['nacimiento'];
-    $pais=$_POST['pais'];
+    
 
    /* if(move_uploaded_file($nom)){
         
@@ -34,8 +32,19 @@ if(isset($_POST['enviar'])){
 
     $_SESSION['first_name']=$nom;
     $_SESSION['last_name']=$ape;
-    $_SESSION['nacimiento']=$nac;
-    $_SESSION['pais']=$pais;
+   
+
+    $file=file("../archivos/users.txt");
+
+    /*
+    //este foreach buscara la linea con la id del usuario para luego modificar su informacion 
+    foreach($file as $line){
+
+        list($id, $stored_user, $stored_pass, $first_name, $last_name)=explode(":",trim($line));
+
+
+    }
+*/
     header("Location: perfil.php");
     exit();
 }

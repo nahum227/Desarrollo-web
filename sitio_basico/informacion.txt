@@ -26,7 +26,7 @@ fopen( ruta_archivo, opcion );
 abrir un archivo 
 opciones:
  r:leer
- w:escribir
+ w:escribir en un fichero, si no existe lo crea
  a:escribir, sin sobreescribir
 
 
@@ -37,6 +37,11 @@ leer un archivo
 filesize( ruta_archvo );
 devuelve el tamaño de un fichero. si se usa para indicar la longitud en la funcion fread( archivo , filesize( ruta_archivo ) ), esta nos leera el archivo completo.
 
+feof( archivo );
+recorre el archivo con el puntero hasta llegar al final. Retorna false si no ha llegado al final y true si ya ha acabado.
+
+fgets( archivo ); 
+Obtiene una linea desde el puntero(la posicion actual del puntero);
 
 fclose( archivo );
 cerrar un archivo. esta funcion se usa para cerrar un archivo que esta abierto
