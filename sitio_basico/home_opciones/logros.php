@@ -16,9 +16,6 @@ while(!feof($file)){
 }
 
 fclose($file);
-/*
-fread($file, filesize( "" ))
-*/
 
 ?>
 </ul>

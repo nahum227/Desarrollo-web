@@ -1,7 +1,3 @@
---------------------------------------------------------------
-FUNCIONES
------------------------------------------------------
-
 -----------
 CONSTANTES:
 -----------
@@ -33,7 +29,6 @@ opciones:
 fread( archivo , longitud );
 leer un archivo
 
-
 filesize( ruta_archvo );
 devuelve el tamaño de un fichero. si se usa para indicar la longitud en la funcion fread( archivo , filesize( ruta_archivo ) ), esta nos leera el archivo completo.
 
@@ -46,4 +41,13 @@ Obtiene una linea desde el puntero(la posicion actual del puntero);
 fclose( archivo );
 cerrar un archivo. esta funcion se usa para cerrar un archivo que esta abierto
 
+
+opendir( directorio ); 
+Abre un gestor de directorio
+
+readdir( direcotio );
+Lee una entrada desde un gestor de directorio si este esta abierto
+
+closedir( directorio );
+Cierra el gestor de directorio
 ------------------------------------------------------------------

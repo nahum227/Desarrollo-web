@@ -8,12 +8,14 @@ $file = file('archivos/users.txt');
 $authenticated = false;
 
 foreach ($file as $line) {
-    list($id, $stored_user, $stored_pass, $first_name, $last_name, $deportista) = explode(':', trim($line));
+    list($id, $stored_user, $stored_pass, $first_name, $last_name, $nacimiento, $nacionalidad, $deportista) = explode(':', trim($line));
     if ($username === $stored_user && $password === $stored_pass) {
         $_SESSION['user_id']=$id;
         $_SESSION['username'] = $username;
         $_SESSION['first_name'] = $first_name;
         $_SESSION['last_name'] = $last_name;
+        $_SESSION['nacimiento']=$nacimiento;
+        $_SESSION['nacionalidad']=$nacionalidad;
         $_SESSION['deportista']=$deportista;
         $authenticated = true;
         break;

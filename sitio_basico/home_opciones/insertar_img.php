@@ -14,7 +14,7 @@ if(isset($_POST['enviar'])){
         header("Location: perfil.php");
         exit();
     }else{
-        echo "error";  //si la carpeta de destino no existe pasa esto
+        echo "error";  
     }
 
 }

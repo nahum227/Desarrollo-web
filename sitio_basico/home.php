@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
 <head>
     <title>Página Principal</title>
 </head>
+
 <body>
     <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION['first_name']) . ' ' . htmlspecialchars($_SESSION['last_name']); ?>!</h2>
     <hr>

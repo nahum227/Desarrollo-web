@@ -4,49 +4,28 @@
 <hr>
 
 <?php
-
-/* 
-//DATOS
-
-//$datos=file("../archivos/datos.txt");
-$ok=false;  //esta variable nomas la hice para indicar cuando se hallaron los datos del usuario en el foreach
-
-foreach($datos as $line){
-    list($first_name, $last_name, $nacimiento, $pais) = explode(':', trim($line));
-    if($first_name==$_SESSION['first_name']){
-        $_SESSION['nacimiento']=$nacimiento;
-        $_SESSION['pais']=$pais;
-        $ok=true;
-        break;
-    }    
-}
-*/
-
-
+$username=$_SESSION['username'];
+echo "<h2 style='color:orange'> $username </h2>";
 
 //FOTO DE PERFIL
-    $nom=$_SESSION['username'];  //se obtiene el username 
+    $username=$_SESSION['username'];  //se obtiene el username 
 
-    $img_ruta="imagenes/$nom.jpg";  //esta variable contiene contienen un dato concatenado, esto para completar la ruta.
+    $img_ruta="imagenes/$username.jpg";  //esta variable contiene contienen un dato concatenado, esto para completar la ruta.
 if(file_exists($img_ruta)){  //si el archivo existe, entonces...
     echo "<img src=$img_ruta>";  //se usa $img_ruta para indicar la ruta
 }else{  //si no existe el archivo se usara la imagen por defecto
     echo "<img src='imagenes/default.jpg'>"; 
 }
-    
-
 ?>
-
-
 
 <br>
 <a href="insertar_img.php">Insertar imagen</a>
 
-<br><br><br>
-<a href="editar_info.php">Editar informacion</a> <!-- opcion para editar la info-->
-
-
-<p>Nombre: <?php echo $_SESSION['first_name'] ?></p>
-<p>Apellido: <?php echo $_SESSION['last_name'] ?></p>
+<br><br>
+<p>Informacion</p>
+<p>Nombre: <?php echo $_SESSION['first_name']; ?></p>
+<p>Apellido: <?php echo $_SESSION['last_name']; ?></p>
+<p>Nacimiento: <?php echo $_SESSION['nacimiento']; ?></p>
+<p>Nacionalidad: <?php echo $_SESSION['nacionalidad']; ?></p>
 
 <a href="../home.php">volver</a>
